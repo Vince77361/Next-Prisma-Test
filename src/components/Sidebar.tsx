@@ -20,7 +20,7 @@ const Sidebar = () => {
       title: todoTitle,
       content: todoContent,
     };
-    const res = await fetch(`/api/post`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASEURL}/api/post`, {
       method: "POST",
       body: JSON.stringify(formData),
     });

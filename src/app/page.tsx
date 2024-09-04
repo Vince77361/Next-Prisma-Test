@@ -7,7 +7,7 @@ export default function Home() {
   const [todos, setTodos] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      await fetch(`/api/post`, {
+      await fetch(`${process.env.NEXT_PUBLIC_BASEURL}/api/post`, {
         cache: "no-store",
       })
         .then((r) => r.json())
@@ -20,7 +20,7 @@ export default function Home() {
     <div>
       {todos.map((key: any) => (
         <TodoItem
-          key={key}
+          key={key.id}
           id={key.id}
           title={key.title}
           content={key.content}
