@@ -9,7 +9,9 @@ export default async function Page({ params }: { params: { id: string } }) {
     <div className="flex flex-col items-center">
       <div className="w-11/12 my-16">
         <div className="flex justify-between">
-          <Button className="bg-white text-black border">뒤로가기</Button>
+          <Button buttonMethod="back" className="bg-white text-black border">
+            뒤로가기
+          </Button>
           <div className="flex justify-between gap-x-14">
             <Button
               id={id}

@@ -37,7 +37,7 @@ const Sidebar = () => {
         />
         <Textarea
           placeholder="투두 내용"
-          className="mt-4 w-64 h-[30rem] resize-none"
+          className="mt-4 w-64 h-[30rem] resize-none text-gray-400"
           value={todoContent}
           onChange={onContentChange}
         />

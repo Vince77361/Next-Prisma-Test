@@ -21,11 +21,14 @@ const Button: React.FC<ButtonProps> = ({
   const router = useRouter();
   const onClick = async () => {
     if (buttonMethod === "edit") {
-      router.push("/edit");
+      router.push(`/edit/${id}`);
     } else if (buttonMethod === "delete") {
       await fetch(`${process.env.NEXT_PUBLIC_BASEURL}/api/post/${id}`, {
         method: "DELETE",
       }).then(() => console.log("삭제 완료"));
+      router.push("/");
+    } else if (buttonMethod === "back") {
+      router.back();
     } else {
       return;
     }
