@@ -12,7 +12,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ title, id }) => {
   return (
     <div className="rounded-2xl border m-10 px-10 py-6">
       <Link href={`/${id}`}>
-        <h3 className="font-bold text-2xl">{title}</h3>
+        <h3 className="font-bold text-3xl">{title}</h3>
       </Link>
     </div>
   );

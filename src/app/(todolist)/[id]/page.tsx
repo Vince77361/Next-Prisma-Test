@@ -32,6 +32,9 @@ export default async function Page({ params }: { params: { id: string } }) {
         <div className=" min-h-[50rem] border rounded-3xl mt-8 p-20">
           <h1 className="text-6xl font-bold">{res.title}</h1>
           <p className="text-2xl mt-10">{res.content}</p>
+          <p className="md absolute bottom-4 text-gray-400">
+            작성 일자: {res.createdAt}
+          </p>
         </div>
       </div>
     </div>

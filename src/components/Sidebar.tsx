@@ -20,14 +20,13 @@ const Sidebar = () => {
       title: todoTitle,
       content: todoContent,
     };
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASEURL}/api/post`, {
+    await fetch(`${process.env.NEXT_PUBLIC_BASEURL}/api/post`, {
       method: "POST",
       body: JSON.stringify(formData),
     });
-    return res;
   };
   return (
-    <div className="w-80 h-screen sticky top-0 bg-slate-300 flex flex-col pl-6">
+    <div className="w-80 h-screen sticky top-0 bg-slate-300 flex flex-col pl-6 rounded-r-2xl">
       <form onSubmit={onSubmit}>
         <Input
           placeholder="투두 제목"

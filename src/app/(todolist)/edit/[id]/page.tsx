@@ -38,7 +38,8 @@ export default function Page({ params }: { params: { id: string } }) {
     await fetch(`${process.env.NEXT_PUBLIC_BASEURL}/api/post/${id}`, {
       method: "PUT",
       body: JSON.stringify(formData),
-    }).then(() => console.log("수정 완료!"));
+    });
+    alert("수정 완료!");
     router.push("/");
   };
   return (

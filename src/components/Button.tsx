@@ -25,7 +25,8 @@ const Button: React.FC<ButtonProps> = ({
     } else if (buttonMethod === "delete") {
       await fetch(`${process.env.NEXT_PUBLIC_BASEURL}/api/post/${id}`, {
         method: "DELETE",
-      }).then(() => console.log("삭제 완료"));
+      });
+      alert("삭제 완료!");
       router.push("/");
     } else if (buttonMethod === "back") {
       router.back();
