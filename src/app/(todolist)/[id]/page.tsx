@@ -11,8 +11,20 @@ export default async function Page({ params }: { params: { id: string } }) {
         <div className="flex justify-between">
           <Button className="bg-white text-black border">뒤로가기</Button>
           <div className="flex justify-between gap-x-14">
-            <Button className="bg-white text-black border">수정</Button>
-            <Button className="bg-white text-red-500 border">삭제</Button>
+            <Button
+              id={id}
+              buttonMethod="edit"
+              className="bg-white text-black border"
+            >
+              수정
+            </Button>
+            <Button
+              id={id}
+              buttonMethod="delete"
+              className="bg-white text-red-500 border"
+            >
+              삭제
+            </Button>
           </div>
         </div>
         <div className=" min-h-[50rem] border rounded-3xl mt-8 p-20">

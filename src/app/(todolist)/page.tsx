@@ -7,14 +7,12 @@ export default function Home() {
   const [todos, setTodos] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      await fetch(`${process.env.NEXT_PUBLIC_BASEURL}/api/post`, {
-        cache: "no-store",
-      })
+      await fetch(`${process.env.NEXT_PUBLIC_BASEURL}/api/post`)
         .then((r) => r.json())
         .then((r) => setTodos(r));
     };
     fetchData();
-  }, [todos]);
+  }, []);
 
   return (
     <div>
