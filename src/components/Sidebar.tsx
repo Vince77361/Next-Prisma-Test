@@ -30,11 +30,13 @@ const Sidebar = () => {
     <div className="w-80 h-screen sticky top-0 bg-slate-300 flex flex-col pl-6">
       <form onSubmit={onSubmit}>
         <Input
+          placeholder="투두 제목"
           className="mt-6 w-64 font-bold"
           value={todoTitle}
           onChange={onTitleChange}
         />
         <Textarea
+          placeholder="투두 내용"
           className="mt-4 w-64 h-[30rem] resize-none"
           value={todoContent}
           onChange={onContentChange}
